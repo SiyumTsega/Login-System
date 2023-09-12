@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -22,25 +23,36 @@ public class LoginPage implements ActionListener{
 	JLabel messageLabel = new JLabel();
 	
 	HashMap<String, String> logininfo = new HashMap<>();
+	
+	ImageIcon icon = new ImageIcon("loginlogo.jpg");
+	
 
 	LoginPage(HashMap<String, String> loginInfoOriginal) {
 
 		logininfo = loginInfoOriginal;
 		
 		userIDLabel.setBounds(50,105,75,15);
+		userIDLabel.setForeground(new Color(0x640000));
 		userPasswordLabel.setBounds(50,155,75,15);
+		userPasswordLabel.setForeground(new Color(0x640000));
 		
 		messageLabel.setBounds(125,250,250,35);
 		messageLabel.setFont(new Font(null, Font.ITALIC,25));
 		
 		userIDField.setBounds(125, 100, 200, 25);
+		userIDField.setBackground(new Color(0x81B2C9));
 		userPasswordField.setBounds(125,150,200,25);
+		userPasswordField.setBackground(new Color(0x81B2C9));
 		
 		loginButton.setBounds(125,200,100,25);
+		loginButton.setBackground(new Color(0x300A6E));
+		loginButton.setForeground(Color.white);
 		loginButton.setFocusable(false);
 		loginButton.addActionListener(this);
 		
 		resetButton.setBounds(225,200,100,25);
+		resetButton.setBackground(new Color(0x300A6E));
+		resetButton.setForeground(Color.white);
 		resetButton.setFocusable(false);
 		resetButton.addActionListener(this);
 		
@@ -54,6 +66,8 @@ public class LoginPage implements ActionListener{
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(420,420);
+		frame.getContentPane().setBackground(new Color(0xE8D5B5));
+		frame.setIconImage(icon.getImage());
 		frame.setLayout(null);
 		frame.setVisible(true);
 		
@@ -88,6 +102,7 @@ public class LoginPage implements ActionListener{
 				messageLabel.setText("Username not found");
 			}
 		}
+		
 	}
 
 }
