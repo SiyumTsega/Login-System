@@ -13,7 +13,7 @@ import javax.swing.JTextField;
 
 public class LoginPage implements ActionListener{
 	
-	JFrame frame = new JFrame();
+	JFrame frame = new JFrame("Please Login");
 	JButton loginButton = new JButton ("Login");
 	JButton resetButton = new JButton("Reset");
 	JTextField userIDField = new JTextField();
@@ -91,7 +91,7 @@ public class LoginPage implements ActionListener{
 				if(logininfo.get(userId).equals(password)) {
 					messageLabel.setForeground(Color.green);
 					messageLabel.setText("Login Successful");
-//					frame.dispose();
+					frame.dispose();
 					WelcomePage welcomePage = new WelcomePage(userId);
 				}
 				else {

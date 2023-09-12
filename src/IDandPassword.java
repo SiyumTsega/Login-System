@@ -5,9 +5,9 @@ public class IDandPassword {
 	HashMap<String, String> logininfo = new HashMap<>();
 	
 	IDandPassword(){
-		logininfo.put("Bro", "pizza");
-		logininfo.put("Brometheus", "PASSWORD");
-		logininfo.put("BroCode", "abc123");
+		logininfo.put("Siyum", "mynameissiyum");
+		logininfo.put("Naflet", "nafi");
+		logininfo.put("Tsigu", "tsigu2023");
 	}
 	
 	protected HashMap getLoginInfo() {
