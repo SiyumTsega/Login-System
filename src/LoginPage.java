@@ -41,8 +41,10 @@ public class LoginPage implements ActionListener{
 		
 		userIDField.setBounds(125, 100, 200, 25);
 		userIDField.setBackground(new Color(0x81B2C9));
+		userIDField.setForeground(new Color(0xFCEAFF));
 		userPasswordField.setBounds(125,150,200,25);
 		userPasswordField.setBackground(new Color(0x81B2C9));
+		userPasswordField.setForeground(new Color(0xFCEAFF));
 		
 		loginButton.setBounds(125,200,100,25);
 		loginButton.setBackground(new Color(0x300A6E));
@@ -89,7 +91,7 @@ public class LoginPage implements ActionListener{
 				if(logininfo.get(userId).equals(password)) {
 					messageLabel.setForeground(Color.green);
 					messageLabel.setText("Login Successful");
-					frame.dispose();
+//					frame.dispose();
 					WelcomePage welcomePage = new WelcomePage(userId);
 				}
 				else {
